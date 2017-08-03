@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 class Emotion extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class Emotion extends React.Component {
 }
 
 Emotion.propTypes = {
-    emotion: React.PropTypes.string.isRequired
+    emotion: PropTypes.object.isRequired
 }
 
 const SubEmotion = (props) => <span>{props.children}&nbsp;</span>

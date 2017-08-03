@@ -1,6 +1,7 @@
 import React from 'react';
 import ChooseNeedsFeelings from './ChooseNeedsFeelings';
 import LanguageCookie from './LanguageCookie';
+import Translations from './Translations';
 
 class App extends React.Component {
 
@@ -8,70 +9,7 @@ class App extends React.Component {
     super();
     LanguageCookie.set('he');
     
-    this.state = {
-      he: {
-        needsName: 'צרכים',
-        feelingsName: 'רגשות',
-        needs: [
-          {
-            name: 'חמלה',
-            values: [
-              'אמפתיה',
-              'חיבוק'
-            ]
-          },
-          {
-            name: 'חיבור',
-            values: [
-              'קהילה',
-              'תקשורת'
-            ]
-          }
-        ],
-        feelings: [
-          {
-            name: 'אהבה',
-            values: [
-              'חגיגת החיים',
-              'שמחה']
-          },
-          {
-            name: 'כעס',
-            values: [
-              'תסכול',
-              'אכזבה'
-            ]
-          }
-        ]
-      },
-      en: {
-        needsName: 'Needs',
-        feelingsName: 'Feelings',
-        needs: [
-          { name: 'Compassion',
-            values: [
-            'empathy',
-            'hug']
-          },
-          { name: 'Connection',
-            values: [
-            'community',
-            'communication']
-          },
-        ],
-        feelings: [
-          { name: 'Love',
-            values: [
-            'celebration of life',
-            'joy']
-          },
-          { name: 'Anger',
-            values: [
-            'frustration',
-            'disappointment']
-          },
-        ]}
-      }
+    this.state = Translations.get();
   }
 
   render() {

@@ -1,5 +1,6 @@
 import React from 'react'
 import Emotion from './Emotion'
+import PropTypes from 'prop-types';
 
 class Feelings extends React.Component {
     render() {
@@ -13,7 +14,7 @@ class Feelings extends React.Component {
 }
 
 Feelings.propTypes = {
-    feelings: React.PropTypes.array.isRequired
+    feelings: PropTypes.array.isRequired
 }
 
 export default Feelings
